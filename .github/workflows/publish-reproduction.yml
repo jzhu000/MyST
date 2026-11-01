@@ -1,0 +1,77 @@
+name: Publish verified MyST-Fusion reproduction assets
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.transfer/**'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify transferred archive, extract and validate
+        run: |
+          set -euo pipefail
+          cat .transfer/part-* | base64 -d > /tmp/myst-reproduction.zip
+          echo '4d3646d8fd278deef75c54eec20a7e277c9b81e3063ab14e029a8e64e4344b71  /tmp/myst-reproduction.zip' | sha256sum --check
+          python - <<'PY'
+          import zipfile,hashlib,json,pathlib
+          with zipfile.ZipFile('/tmp/myst-reproduction.zip') as z:
+              assert z.testzip() is None
+              manifest_bytes=z.read('reproduction/MANIFEST.json')
+              assert hashlib.sha256(manifest_bytes).hexdigest()=='b809c9cccbda6d05e6a5af52631a489e7c0039353acd8cd30d992ea44b48bed2'
+              listed=json.loads(manifest_bytes)['files']
+              expected={'reproduction/'+x['path'] for x in listed}|{'reproduction/MANIFEST.json'}
+              assert set(z.namelist())==expected
+              for info in z.infolist():
+                  path=pathlib.PurePosixPath(info.filename)
+                  assert not path.is_absolute() and '..' not in path.parts
+                  assert path.parts[0]=='reproduction'
+              z.extractall('.')
+          for x in listed:
+              raw=(pathlib.Path('reproduction')/x['path']).read_bytes()
+              assert len(raw)==x['bytes']
+              assert hashlib.sha256(raw).hexdigest()==x['sha256']
+          print('Verified',len(listed)+1,'source files')
+          PY
+          python reproduction/scripts/verify.py
+      - name: Add entry-point documentation
+        run: |
+          cat > README.md <<'EOF'
+          # MyST-Fusion: Reproducibility Materials
+
+          Reproducibility package for the revised *Information Fusion* manuscript:
+
+          **MyST-Fusion: Multi-Type Rule Mining-Driven Semantic-Temporal Information Fusion for Temporal Knowledge Graph Forecasting.**
+
+          This repository provides the method implementation, entity-type labels, training type-pattern statistics, mined temporal rule banks, fixed entity/relation ID mappings, configuration files, and evaluation scripts covering ICEWS14, ICEWS18, YAGO, GDELT and WIKI.
+
+          See [the complete reproduction instructions](reproduction/README.md) and [the file-integrity manifest](reproduction/MANIFEST.json).
+
+          Verify with:
+
+          ```bash
+          python reproduction/scripts/verify.py
+          python reproduction/scripts/check_core.py
+          ```
+
+          Full training/forecasting requires separately obtained benchmark data and supported pretrained model weights. The provided assets are the fixed revision assets; publishing this repository does not constitute rerunning the reported experiments.
+
+          The material was imported from a byte-verified, 67-file M7 submission archive (SHA-256: `4d3646d8fd278deef75c54eec20a7e277c9b81e3063ab14e029a8e64e4344b71`).
+
+          License: Apache 2.0.
+          EOF
+      - name: Commit complete verified package
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm -r .transfer
+          git add -f README.md reproduction/
+          git commit -m 'Publish verified MyST-Fusion implementation and five-dataset assets [skip ci]'
+          git push origin HEAD:main
