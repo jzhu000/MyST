@@ -1,0 +1,337 @@
+{
+  "date": "2026-10-31",
+  "scope": "M7 implementation, final types, rule banks, evaluation scripts",
+  "excludes": "MANIFEST.json itself; runtime data, caches, models, outputs and compiled binaries",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 147,
+      "sha256": "5ac63063aec1de8f6bfcbaf098799505ef4a3b3e8f25a8e73bba55207929688f"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 86,
+      "sha256": "2d00bff7b31e9837de2f37ff8960886fa26e9338f64366fae121b05bcbe6c18a"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11558,
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 17007,
+      "sha256": "f86e1591b826e707ac3f4dd2c08774a2578e98a370debdf45124e2e0276c3886"
+    },
+    {
+      "path": "assets/GDELT/entity2id.txt",
+      "bytes": 153905,
+      "sha256": "7d946d06bd006342a3959ea4c244198b0ac6f3f703a25f2ad889bc714f3482e8"
+    },
+    {
+      "path": "assets/GDELT/entity2label_clustered_final.json",
+      "bytes": 262413,
+      "sha256": "1ed8fb60e6240b5ea4acc36f5658140fc4c4c65717e984cefe7f2acfead4e659"
+    },
+    {
+      "path": "assets/GDELT/relation2id.txt",
+      "bytes": 8207,
+      "sha256": "e9c6c7caba78b0cf902966fd89bb02a8e122d610b00747929f514ab84e479015"
+    },
+    {
+      "path": "assets/GDELT/relation_type_counts.json",
+      "bytes": 1366709,
+      "sha256": "db67af819c4df41b1a65c5edb68cd46b8409023904a51272418b203e686b6fab"
+    },
+    {
+      "path": "assets/GDELT/relation_type_percentages.json",
+      "bytes": 2036445,
+      "sha256": "77dc4307f6f7b47b6b9808ebb47da2f4f7c878f98d8e226f041679be5cda34fb"
+    },
+    {
+      "path": "assets/GDELT/rules/joint.json",
+      "bytes": 23670967,
+      "sha256": "29698ec3c0e6df8928ebccefecd83a948495b23a7e2c7158fde85daa6adc018f"
+    },
+    {
+      "path": "assets/ICEWS14/entity2id.txt",
+      "bytes": 205155,
+      "sha256": "27c7b48a8427392fdbdae970215f9e6f406f3f1a1ef4a0b222d7145f46e902ff"
+    },
+    {
+      "path": "assets/ICEWS14/entity2label_clustered_final.json",
+      "bytes": 297821,
+      "sha256": "282862f06923d133034e546d5f08d1156b37cae30c86ea66c84df5e155ed5634"
+    },
+    {
+      "path": "assets/ICEWS14/relation2id.txt",
+      "bytes": 7856,
+      "sha256": "bd78ff1bfc2c9912f2d90182a6b259b98b3b4484625d5cb5b9c313ba922f6039"
+    },
+    {
+      "path": "assets/ICEWS14/relation_type_counts.json",
+      "bytes": 81090,
+      "sha256": "10db0e82c305754f1085767c9cb85eb4a6f640f0b887ff984a2d13b181bc793c"
+    },
+    {
+      "path": "assets/ICEWS14/relation_type_percentages.json",
+      "bytes": 114582,
+      "sha256": "09769be42ed618e91fdd785947ca0dfe1f31d657abe7b3eadc01f2d5f86ab957"
+    },
+    {
+      "path": "assets/ICEWS14/rules/joint.json",
+      "bytes": 9381837,
+      "sha256": "f954072c52b5737bbc1ff03d592244156b75f866f09d7abcb6992c954fbbba94"
+    },
+    {
+      "path": "assets/ICEWS14/rules/time.json",
+      "bytes": 6256685,
+      "sha256": "9e082c293dcc324b907413e7d59f4067142a43ce1f65e44afc03efaa495c7173"
+    },
+    {
+      "path": "assets/ICEWS14/rules/type.json",
+      "bytes": 6613996,
+      "sha256": "9fb1b695177789e271d967756821dbd48ef4d7d36e7c2d81170369e8c02805e3"
+    },
+    {
+      "path": "assets/ICEWS14/rules/uniform.json",
+      "bytes": 6169406,
+      "sha256": "69171296a570b1fd48d7bc32540892136f8e36d3dc387f9f70d74ac5be17c339"
+    },
+    {
+      "path": "assets/ICEWS18/entity2id.txt",
+      "bytes": 697229,
+      "sha256": "52c199f2417efc07b4a007ea75dcb4976abb982850ae8103ff0b9438540f9c0d"
+    },
+    {
+      "path": "assets/ICEWS18/entity2label_clustered_final.json",
+      "bytes": 1112550,
+      "sha256": "f1d9cdb9e668dd90d46e58d55ffffa4a2af6967d272169293caf1ba2737b5c03"
+    },
+    {
+      "path": "assets/ICEWS18/relation2id.txt",
+      "bytes": 9028,
+      "sha256": "c3d1d7d758060d3785623bbe6834c8678fb3ddcc7b30f6fdb6ec97b55b9aa7d7"
+    },
+    {
+      "path": "assets/ICEWS18/relation_type_counts.json",
+      "bytes": 301600,
+      "sha256": "37eba1e9d80e1482a4f0bea8ef898e8da9babd9f0dcf212741af9b641137e04f"
+    },
+    {
+      "path": "assets/ICEWS18/relation_type_percentages.json",
+      "bytes": 421942,
+      "sha256": "35b934525f5ba9f9893000de6ef11b5c88e41080e9990feada6dd2c78d2dd91a"
+    },
+    {
+      "path": "assets/ICEWS18/rules/joint.json",
+      "bytes": 11604858,
+      "sha256": "b2402c2a2205c6a9c5286dc6093a0ca6c4a0dd87a525dae7ee6607f2184e7655"
+    },
+    {
+      "path": "assets/ICEWS18/rules/time.json",
+      "bytes": 8773021,
+      "sha256": "8f3f7669fad9385e86fd1e61116fb171bba917007c5c468e6e473735ad597112"
+    },
+    {
+      "path": "assets/ICEWS18/rules/type.json",
+      "bytes": 8004702,
+      "sha256": "b868a6719e09d9d50e35147b2d57b4a19be3d41f1cf78adf5ce0dd14600a8807"
+    },
+    {
+      "path": "assets/ICEWS18/rules/uniform.json",
+      "bytes": 7650365,
+      "sha256": "934ae0c97af14efc7317d867dcbb8310dc5252e0718c65af51c59b69853a2cdb"
+    },
+    {
+      "path": "assets/WIKI/entity2id.txt",
+      "bytes": 327215,
+      "sha256": "15db7264e2fb5b013141ffa6df92632eb7771954aafe8fcc99ff31fb451e261a"
+    },
+    {
+      "path": "assets/WIKI/entity2label_clustered_final.json",
+      "bytes": 473001,
+      "sha256": "56ccf20b9947b5c8a56ff1be2c33627e7d6fbff6ab3b555c3d0bd2c639832f83"
+    },
+    {
+      "path": "assets/WIKI/entity_id_redirects.json",
+      "bytes": 698,
+      "sha256": "79ba06e40753da920a4c62fa13469f07e58236b636001706e747e71c26e86011"
+    },
+    {
+      "path": "assets/WIKI/relation2id.txt",
+      "bytes": 529,
+      "sha256": "71a101a96c92cfe8572367dfe60c6e1279cf62341bdabdb8f5b9cd342177a3af"
+    },
+    {
+      "path": "assets/WIKI/relation_type_counts.json",
+      "bytes": 15961,
+      "sha256": "423b3d2c24ba6c615b37dd1617b336135202596b6365f7ee0299d43c0f9ddce7"
+    },
+    {
+      "path": "assets/WIKI/relation_type_percentages.json",
+      "bytes": 22597,
+      "sha256": "067bcfcee47b00fa211f3b417e807d04b0862c216d4ccf4d97dfad683979b467"
+    },
+    {
+      "path": "assets/WIKI/rules/joint.json",
+      "bytes": 181484,
+      "sha256": "b601f61816d2197a664b1ae13974409d550f3bdcf36ae6898b2abdb35d414dd8"
+    },
+    {
+      "path": "assets/YAGO/entity2id.txt",
+      "bytes": 253041,
+      "sha256": "548f4196a0b4cbd895a16ba4f21393aa9d887eafa39a0c1a33d1d1dd7f976f32"
+    },
+    {
+      "path": "assets/YAGO/entity2label_clustered_final.json",
+      "bytes": 372269,
+      "sha256": "041cea1270ce06bf539f0a1680a787ce12d25505878fd01ba98c1fa1299c6f45"
+    },
+    {
+      "path": "assets/YAGO/relation2id.txt",
+      "bytes": 130,
+      "sha256": "b3ab5441aac7847fedf5c7684799fdaf6a091baaaea8e9dbf3f54c213a18d7cb"
+    },
+    {
+      "path": "assets/YAGO/relation_type_counts.json",
+      "bytes": 8705,
+      "sha256": "026c490042c6d65c74112cf756f922472c1bf3b4ae3534252e40771e07864dd6"
+    },
+    {
+      "path": "assets/YAGO/relation_type_percentages.json",
+      "bytes": 13144,
+      "sha256": "2cb7a786aa7eb0f9abbfd545bdc616f258e5dcbfc97b18f54b7f7126a68adc07"
+    },
+    {
+      "path": "assets/YAGO/rules/joint.json",
+      "bytes": 34930,
+      "sha256": "0285d5eec441df610989cd53b94346652ab52c11ca3ddf304d03ef77ef6952ca"
+    },
+    {
+      "path": "assets/YAGO/rules/time.json",
+      "bytes": 24259,
+      "sha256": "72646bf89b4295120fd8c180fbaaf3b696f00eb9d1501c7278a9b124e503ad8e"
+    },
+    {
+      "path": "assets/YAGO/rules/type.json",
+      "bytes": 23818,
+      "sha256": "396f8c8dfe00bb6cb31bcde3a6593131573814750fe98ee6659dafc80f488a07"
+    },
+    {
+      "path": "assets/YAGO/rules/uniform.json",
+      "bytes": 24102,
+      "sha256": "266a2ae8916ba9bf43162c7803b78d1d061f28e359091cb8cd3d0bc112d4aebd"
+    },
+    {
+      "path": "assets/provenance.json",
+      "bytes": 24256,
+      "sha256": "e47411ea4c3947b8eb59c7dd7cfd84a600a8dbde22636696b146dc86e2a70cee"
+    },
+    {
+      "path": "code/myst_fusion/__init__.py",
+      "bytes": 117,
+      "sha256": "a0301346c44d53c773035356ab0079b6bf3afbc5ceda5d1772ff572380f8982f"
+    },
+    {
+      "path": "code/myst_fusion/data.py",
+      "bytes": 6775,
+      "sha256": "1da3c9c34116676322d1c03837f34a6d56509d0daebd83bff52e0ac4c382309b"
+    },
+    {
+      "path": "code/myst_fusion/decoding.py",
+      "bytes": 7325,
+      "sha256": "6470d0aa5d95991354ef15e5ce922527c08fec62d02111d1d45e31f8e5c7dedb"
+    },
+    {
+      "path": "code/myst_fusion/entity_types.py",
+      "bytes": 3589,
+      "sha256": "cbc219e51ca63672a7ccb29e7be42fd465fd7b1cea0db6ecdc7229f4c784fabe"
+    },
+    {
+      "path": "code/myst_fusion/mining.py",
+      "bytes": 5778,
+      "sha256": "122abbc01f5bb5f76e8c8f07ba8bf77e30870af6f0933d118304cd62ceedb4de"
+    },
+    {
+      "path": "code/myst_fusion/prompt.py",
+      "bytes": 2838,
+      "sha256": "e9b664a825fa28c302527d91a99ae251a1d463f9bb08c9b83046fac4dd550c71"
+    },
+    {
+      "path": "code/myst_fusion/retrieval.py",
+      "bytes": 6853,
+      "sha256": "86505d8bdbbd33717f1bcb19e428d20a72c6480dbbf84aaa909847596a5053ad"
+    },
+    {
+      "path": "code/myst_fusion/workflow.py",
+      "bytes": 8083,
+      "sha256": "db70f41c4cdd3d55b1d016664a41c09e0b84f088aa0c7cb08278d47daccd40bc"
+    },
+    {
+      "path": "code/native/grounded_chain_retriever.cpp",
+      "bytes": 7817,
+      "sha256": "3706bc5e34cc9f128bc4ff6c76977cbedc0640be5a7d3c10c307aded93e84e3d"
+    },
+    {
+      "path": "configs/benchmark_checksums.json",
+      "bytes": 4857,
+      "sha256": "e4f1f76d1a759fb04fb3c5cdb606c51312c941472bf31b4a3d4e05ec3b491d3d"
+    },
+    {
+      "path": "configs/benchmark_source.json",
+      "bytes": 3067,
+      "sha256": "a8e653ebee8696117961d1bc79c0cf40851f1900dfa89a7decd01bd19b2d0f18"
+    },
+    {
+      "path": "configs/protocol.json",
+      "bytes": 885,
+      "sha256": "21f17876d997666404def61c86f4f42ec6f26734aec84e178228b315d133e410"
+    },
+    {
+      "path": "configs/train.yaml",
+      "bytes": 447,
+      "sha256": "b0d0cb1750a8fa4c99d43198b929024a8fabb515643a6515bff014363ce8c5c2"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 139,
+      "sha256": "1df67c5be85ee9b7f555fe121c98baa5da83e5913a617b578d6c79294804dd82"
+    },
+    {
+      "path": "scripts/build_native.py",
+      "bytes": 494,
+      "sha256": "6391164c150ecee861b485bd05865f3569a265d1b62c903a2eb4c24b154d8397"
+    },
+    {
+      "path": "scripts/check_core.py",
+      "bytes": 15917,
+      "sha256": "725b15c9bb8969c6448fa821abf07cc7a1f53771de5c1435aaf77cf85781cd39"
+    },
+    {
+      "path": "scripts/check_decoder.py",
+      "bytes": 7840,
+      "sha256": "48334b9dec73b6dcf0fb8ae922810bd000dd4623f36d6ac7b06f569e2d55b2c0"
+    },
+    {
+      "path": "scripts/check_paper_cases.py",
+      "bytes": 3359,
+      "sha256": "36a1cb4e18bfeb619257c0e7c54a3cd7ea771625ff67e34de9c5707dd7a2acb0"
+    },
+    {
+      "path": "scripts/package.py",
+      "bytes": 1983,
+      "sha256": "7088427a66a2162cd2ccd904dd44879118735d971d7706a7d8a43f11f921bc44"
+    },
+    {
+      "path": "scripts/run.py",
+      "bytes": 12893,
+      "sha256": "6323d1c3a2031077c081ab0abd86fbd6bc97b751dfd7dfb281b15a789de0cf35"
+    },
+    {
+      "path": "scripts/verify.py",
+      "bytes": 4324,
+      "sha256": "1917ce8fe867d5909fa8513b45e0f46ac63b89c7a297c858b48e959fb8de934f"
+    }
+  ]
+}

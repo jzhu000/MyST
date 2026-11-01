@@ -1,0 +1,574 @@
+{
+  "note": "Unmodified repository assets; identity with the assets used in the external revised experiments was confirmed by the author on 2026-10-31. Historical observed type weights are percentages (100*F): missing weight 1.0 is equivalent to epsilon=0.01 on the frequency scale after normalization. New single-worker Python mining uses the frequency scale and a different RNG stream. Percentage assets are divided by 100 on load.",
+  "files": [
+    {
+      "path": "assets/ICEWS14/entity2id.txt",
+      "source": "data/ICEWS14/entity2id.txt",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "27c7b48a8427392fdbdae970215f9e6f406f3f1a1ef4a0b222d7145f46e902ff",
+      "bytes": 205155,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/ICEWS14/relation2id.txt",
+      "source": "data/ICEWS14/relation2id.txt",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "bd78ff1bfc2c9912f2d90182a6b259b98b3b4484625d5cb5b9c313ba922f6039",
+      "bytes": 7856,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/ICEWS14/entity2label_clustered_final.json",
+      "source": "data/ICEWS14/entity2label_clustered_final.json",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "282862f06923d133034e546d5f08d1156b37cae30c86ea66c84df5e155ed5634",
+      "bytes": 297821,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/ICEWS14/relation_type_percentages.json",
+      "source": "pattern_w_ent/ICEWS14/train/relation_type_percentages.json",
+      "kind": "training_type_patterns",
+      "sha256": "09769be42ed618e91fdd785947ca0dfe1f31d657abe7b3eadc01f2d5f86ab957",
+      "bytes": 114582,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "units": "percent"
+    },
+    {
+      "path": "assets/ICEWS14/relation_type_counts.json",
+      "source": "pattern_w_ent/ICEWS14/train/relation_type_counts.json",
+      "kind": "training_type_patterns",
+      "sha256": "10db0e82c305754f1085767c9cb85eb4a6f640f0b887ff984a2d13b181bc793c",
+      "bytes": 81090,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "units": "count"
+    },
+    {
+      "path": "assets/ICEWS14/rules/joint.json",
+      "source": "rule_w_ent/ICEWS14/r[1,2,3]_n200_exp_w_ent_s123_rules.json",
+      "kind": "main_rules",
+      "sha256": "f954072c52b5737bbc1ff03d592244156b75f866f09d7abcb6992c954fbbba94",
+      "bytes": 9381837,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "lengths": [
+          1,
+          2,
+          3
+        ],
+        "walks": 200,
+        "seed": 123,
+        "missing_type_weight": "not recorded in bank; historical implementation default is 1.0 on the percentage scale, equivalent to 0.01 on the frequency scale"
+      }
+    },
+    {
+      "path": "assets/ICEWS14/rules/uniform.json",
+      "source": "analysis/rule_walk_ablation_rerun_n200/mining/ICEWS14/r[1,2,3]_n200_uniform_s123_rules.json",
+      "kind": "discovery_ablation_rules",
+      "sha256": "69171296a570b1fd48d7bc32540892136f8e36d3dc387f9f70d74ac5be17c339",
+      "bytes": 6169406,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "protocol": "matched-four-way-walk-mining-v1",
+        "walks_per_relation_per_length": 200,
+        "seed": 123,
+        "rule_lengths": [
+          1,
+          2,
+          3
+        ],
+        "confidence_body_samples": 500,
+        "training_only": true,
+        "rng": "SeedSequence([123, relation]); fresh same initial stream in each independent mode/relation process",
+        "missing_type_pattern_weight": 1.0,
+        "type_weight_units": "percentage: observed weights=100*F",
+        "effective_missing_type_weight_fraction": 0.01
+      }
+    },
+    {
+      "path": "assets/ICEWS14/rules/time.json",
+      "source": "analysis/rule_walk_ablation_rerun_n200/mining/ICEWS14/r[1,2,3]_n200_time_s123_rules.json",
+      "kind": "discovery_ablation_rules",
+      "sha256": "9e082c293dcc324b907413e7d59f4067142a43ce1f65e44afc03efaa495c7173",
+      "bytes": 6256685,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "protocol": "matched-four-way-walk-mining-v1",
+        "walks_per_relation_per_length": 200,
+        "seed": 123,
+        "rule_lengths": [
+          1,
+          2,
+          3
+        ],
+        "confidence_body_samples": 500,
+        "training_only": true,
+        "rng": "SeedSequence([123, relation]); fresh same initial stream in each independent mode/relation process",
+        "missing_type_pattern_weight": 1.0,
+        "type_weight_units": "percentage: observed weights=100*F",
+        "effective_missing_type_weight_fraction": 0.01
+      }
+    },
+    {
+      "path": "assets/ICEWS14/rules/type.json",
+      "source": "analysis/rule_walk_ablation_rerun_n200/mining/ICEWS14/r[1,2,3]_n200_type_s123_rules.json",
+      "kind": "discovery_ablation_rules",
+      "sha256": "9fb1b695177789e271d967756821dbd48ef4d7d36e7c2d81170369e8c02805e3",
+      "bytes": 6613996,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "protocol": "matched-four-way-walk-mining-v1",
+        "walks_per_relation_per_length": 200,
+        "seed": 123,
+        "rule_lengths": [
+          1,
+          2,
+          3
+        ],
+        "confidence_body_samples": 500,
+        "training_only": true,
+        "rng": "SeedSequence([123, relation]); fresh same initial stream in each independent mode/relation process",
+        "missing_type_pattern_weight": 1.0,
+        "type_weight_units": "percentage: observed weights=100*F",
+        "effective_missing_type_weight_fraction": 0.01
+      }
+    },
+    {
+      "path": "assets/ICEWS18/entity2id.txt",
+      "source": "data/ICEWS18/entity2id.txt",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "52c199f2417efc07b4a007ea75dcb4976abb982850ae8103ff0b9438540f9c0d",
+      "bytes": 697229,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/ICEWS18/relation2id.txt",
+      "source": "data/ICEWS18/relation2id.txt",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "c3d1d7d758060d3785623bbe6834c8678fb3ddcc7b30f6fdb6ec97b55b9aa7d7",
+      "bytes": 9028,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/ICEWS18/entity2label_clustered_final.json",
+      "source": "data/ICEWS18/entity2label_clustered_final.json",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "f1d9cdb9e668dd90d46e58d55ffffa4a2af6967d272169293caf1ba2737b5c03",
+      "bytes": 1112550,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/ICEWS18/relation_type_percentages.json",
+      "source": "pattern_w_ent/ICEWS18/train/relation_type_percentages.json",
+      "kind": "training_type_patterns",
+      "sha256": "35b934525f5ba9f9893000de6ef11b5c88e41080e9990feada6dd2c78d2dd91a",
+      "bytes": 421942,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "units": "percent"
+    },
+    {
+      "path": "assets/ICEWS18/relation_type_counts.json",
+      "source": "pattern_w_ent/ICEWS18/train/relation_type_counts.json",
+      "kind": "training_type_patterns",
+      "sha256": "37eba1e9d80e1482a4f0bea8ef898e8da9babd9f0dcf212741af9b641137e04f",
+      "bytes": 301600,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "units": "count"
+    },
+    {
+      "path": "assets/ICEWS18/rules/joint.json",
+      "source": "rule_w_ent/ICEWS18/r[1,2,3]_n200_exp_w_ent_s123_rules.json",
+      "kind": "main_rules",
+      "sha256": "b2402c2a2205c6a9c5286dc6093a0ca6c4a0dd87a525dae7ee6607f2184e7655",
+      "bytes": 11604858,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "lengths": [
+          1,
+          2,
+          3
+        ],
+        "walks": 200,
+        "seed": 123,
+        "missing_type_weight": "not recorded in bank; historical implementation default is 1.0 on the percentage scale, equivalent to 0.01 on the frequency scale"
+      }
+    },
+    {
+      "path": "assets/ICEWS18/rules/uniform.json",
+      "source": "analysis/rule_walk_ablation_rerun_n200/mining/ICEWS18/r[1,2,3]_n200_uniform_s123_rules.json",
+      "kind": "discovery_ablation_rules",
+      "sha256": "934ae0c97af14efc7317d867dcbb8310dc5252e0718c65af51c59b69853a2cdb",
+      "bytes": 7650365,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "protocol": "matched-four-way-walk-mining-v1",
+        "walks_per_relation_per_length": 200,
+        "seed": 123,
+        "rule_lengths": [
+          1,
+          2,
+          3
+        ],
+        "confidence_body_samples": 500,
+        "training_only": true,
+        "rng": "SeedSequence([123, relation]); fresh same initial stream in each independent mode/relation process",
+        "missing_type_pattern_weight": 1.0,
+        "type_weight_units": "percentage: observed weights=100*F",
+        "effective_missing_type_weight_fraction": 0.01
+      }
+    },
+    {
+      "path": "assets/ICEWS18/rules/time.json",
+      "source": "analysis/rule_walk_ablation_rerun_n200/mining/ICEWS18/r[1,2,3]_n200_time_s123_rules.json",
+      "kind": "discovery_ablation_rules",
+      "sha256": "8f3f7669fad9385e86fd1e61116fb171bba917007c5c468e6e473735ad597112",
+      "bytes": 8773021,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "protocol": "matched-four-way-walk-mining-v1",
+        "walks_per_relation_per_length": 200,
+        "seed": 123,
+        "rule_lengths": [
+          1,
+          2,
+          3
+        ],
+        "confidence_body_samples": 500,
+        "training_only": true,
+        "rng": "SeedSequence([123, relation]); fresh same initial stream in each independent mode/relation process",
+        "missing_type_pattern_weight": 1.0,
+        "type_weight_units": "percentage: observed weights=100*F",
+        "effective_missing_type_weight_fraction": 0.01
+      }
+    },
+    {
+      "path": "assets/ICEWS18/rules/type.json",
+      "source": "analysis/rule_walk_ablation_rerun_n200/mining/ICEWS18/r[1,2,3]_n200_type_s123_rules.json",
+      "kind": "discovery_ablation_rules",
+      "sha256": "b868a6719e09d9d50e35147b2d57b4a19be3d41f1cf78adf5ce0dd14600a8807",
+      "bytes": 8004702,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "protocol": "matched-four-way-walk-mining-v1",
+        "walks_per_relation_per_length": 200,
+        "seed": 123,
+        "rule_lengths": [
+          1,
+          2,
+          3
+        ],
+        "confidence_body_samples": 500,
+        "training_only": true,
+        "rng": "SeedSequence([123, relation]); fresh same initial stream in each independent mode/relation process",
+        "missing_type_pattern_weight": 1.0,
+        "type_weight_units": "percentage: observed weights=100*F",
+        "effective_missing_type_weight_fraction": 0.01
+      }
+    },
+    {
+      "path": "assets/YAGO/entity2id.txt",
+      "source": "data/YAGO/entity2id.txt",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "548f4196a0b4cbd895a16ba4f21393aa9d887eafa39a0c1a33d1d1dd7f976f32",
+      "bytes": 253041,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/YAGO/relation2id.txt",
+      "source": "data/YAGO/relation2id.txt",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "b3ab5441aac7847fedf5c7684799fdaf6a091baaaea8e9dbf3f54c213a18d7cb",
+      "bytes": 130,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/YAGO/entity2label_clustered_final.json",
+      "source": "data/YAGO/entity2label_clustered_final.json",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "041cea1270ce06bf539f0a1680a787ce12d25505878fd01ba98c1fa1299c6f45",
+      "bytes": 372269,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/YAGO/relation_type_percentages.json",
+      "source": "pattern_w_ent/YAGO/train/relation_type_percentages.json",
+      "kind": "training_type_patterns",
+      "sha256": "2cb7a786aa7eb0f9abbfd545bdc616f258e5dcbfc97b18f54b7f7126a68adc07",
+      "bytes": 13144,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "units": "percent"
+    },
+    {
+      "path": "assets/YAGO/relation_type_counts.json",
+      "source": "pattern_w_ent/YAGO/train/relation_type_counts.json",
+      "kind": "training_type_patterns",
+      "sha256": "026c490042c6d65c74112cf756f922472c1bf3b4ae3534252e40771e07864dd6",
+      "bytes": 8705,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "units": "count"
+    },
+    {
+      "path": "assets/YAGO/rules/joint.json",
+      "source": "rule_w_ent/YAGO/r[1,2,3]_n200_exp_w_ent_s123_rules.json",
+      "kind": "main_rules",
+      "sha256": "0285d5eec441df610989cd53b94346652ab52c11ca3ddf304d03ef77ef6952ca",
+      "bytes": 34930,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "lengths": [
+          1,
+          2,
+          3
+        ],
+        "walks": 200,
+        "seed": 123,
+        "missing_type_weight": "not recorded in bank; historical implementation default is 1.0 on the percentage scale, equivalent to 0.01 on the frequency scale"
+      }
+    },
+    {
+      "path": "assets/YAGO/rules/uniform.json",
+      "source": "analysis/rule_walk_ablation_rerun_n200/mining/YAGO/r[1,2,3]_n200_uniform_s123_rules.json",
+      "kind": "discovery_ablation_rules",
+      "sha256": "266a2ae8916ba9bf43162c7803b78d1d061f28e359091cb8cd3d0bc112d4aebd",
+      "bytes": 24102,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "protocol": "matched-four-way-walk-mining-v1",
+        "walks_per_relation_per_length": 200,
+        "seed": 123,
+        "rule_lengths": [
+          1,
+          2,
+          3
+        ],
+        "confidence_body_samples": 500,
+        "training_only": true,
+        "rng": "SeedSequence([123, relation]); fresh same initial stream in each independent mode/relation process",
+        "missing_type_pattern_weight": 1.0,
+        "type_weight_units": "percentage: observed weights=100*F",
+        "effective_missing_type_weight_fraction": 0.01
+      }
+    },
+    {
+      "path": "assets/YAGO/rules/time.json",
+      "source": "analysis/rule_walk_ablation_rerun_n200/mining/YAGO/r[1,2,3]_n200_time_s123_rules.json",
+      "kind": "discovery_ablation_rules",
+      "sha256": "72646bf89b4295120fd8c180fbaaf3b696f00eb9d1501c7278a9b124e503ad8e",
+      "bytes": 24259,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "protocol": "matched-four-way-walk-mining-v1",
+        "walks_per_relation_per_length": 200,
+        "seed": 123,
+        "rule_lengths": [
+          1,
+          2,
+          3
+        ],
+        "confidence_body_samples": 500,
+        "training_only": true,
+        "rng": "SeedSequence([123, relation]); fresh same initial stream in each independent mode/relation process",
+        "missing_type_pattern_weight": 1.0,
+        "type_weight_units": "percentage: observed weights=100*F",
+        "effective_missing_type_weight_fraction": 0.01
+      }
+    },
+    {
+      "path": "assets/YAGO/rules/type.json",
+      "source": "analysis/rule_walk_ablation_rerun_n200/mining/YAGO/r[1,2,3]_n200_type_s123_rules.json",
+      "kind": "discovery_ablation_rules",
+      "sha256": "396f8c8dfe00bb6cb31bcde3a6593131573814750fe98ee6659dafc80f488a07",
+      "bytes": 23818,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "protocol": "matched-four-way-walk-mining-v1",
+        "walks_per_relation_per_length": 200,
+        "seed": 123,
+        "rule_lengths": [
+          1,
+          2,
+          3
+        ],
+        "confidence_body_samples": 500,
+        "training_only": true,
+        "rng": "SeedSequence([123, relation]); fresh same initial stream in each independent mode/relation process",
+        "missing_type_pattern_weight": 1.0,
+        "type_weight_units": "percentage: observed weights=100*F",
+        "effective_missing_type_weight_fraction": 0.01
+      }
+    },
+    {
+      "path": "assets/GDELT/entity2id.txt",
+      "source": "data/GDELT/entity2id.txt",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "7d946d06bd006342a3959ea4c244198b0ac6f3f703a25f2ad889bc714f3482e8",
+      "bytes": 153905,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/GDELT/relation2id.txt",
+      "source": "data/GDELT/relation2id.txt",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "e9c6c7caba78b0cf902966fd89bb02a8e122d610b00747929f514ab84e479015",
+      "bytes": 8207,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/GDELT/entity2label_clustered_final.json",
+      "source": "data/GDELT/entity2label_clustered_final.json",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "1ed8fb60e6240b5ea4acc36f5658140fc4c4c65717e984cefe7f2acfead4e659",
+      "bytes": 262413,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/GDELT/relation_type_percentages.json",
+      "source": "pattern_w_ent/GDELT/train/relation_type_percentages.json",
+      "kind": "training_type_patterns",
+      "sha256": "77dc4307f6f7b47b6b9808ebb47da2f4f7c878f98d8e226f041679be5cda34fb",
+      "bytes": 2036445,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "units": "percent"
+    },
+    {
+      "path": "assets/GDELT/relation_type_counts.json",
+      "source": "pattern_w_ent/GDELT/train/relation_type_counts.json",
+      "kind": "training_type_patterns",
+      "sha256": "db67af819c4df41b1a65c5edb68cd46b8409023904a51272418b203e686b6fab",
+      "bytes": 1366709,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "units": "count"
+    },
+    {
+      "path": "assets/GDELT/rules/joint.json",
+      "source": "rule_w_ent/GDELT/r[1,2,3]_n200_exp_w_ent_s123_rules.json",
+      "kind": "main_rules",
+      "sha256": "29698ec3c0e6df8928ebccefecd83a948495b23a7e2c7158fde85daa6adc018f",
+      "bytes": 23670967,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "lengths": [
+          1,
+          2,
+          3
+        ],
+        "walks": 200,
+        "seed": 123,
+        "missing_type_weight": "not recorded in bank; historical implementation default is 1.0 on the percentage scale, equivalent to 0.01 on the frequency scale"
+      }
+    },
+    {
+      "path": "assets/WIKI/entity2id.txt",
+      "source": "data/WIKI/entity2id.txt",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "15db7264e2fb5b013141ffa6df92632eb7771954aafe8fcc99ff31fb451e261a",
+      "bytes": 327215,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/WIKI/relation2id.txt",
+      "source": "data/WIKI/relation2id.txt",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "71a101a96c92cfe8572367dfe60c6e1279cf62341bdabdb8f5b9cd342177a3af",
+      "bytes": 529,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/WIKI/entity2label_clustered_final.json",
+      "source": "data/WIKI/entity2label_clustered_final.json",
+      "kind": "final_types_and_fixed_ids",
+      "sha256": "56ccf20b9947b5c8a56ff1be2c33627e7d6fbff6ab3b555c3d0bd2c639832f83",
+      "bytes": 473001,
+      "external_experiment_identity": "author_confirmed_same_files"
+    },
+    {
+      "path": "assets/WIKI/relation_type_percentages.json",
+      "source": "pattern_w_ent/WIKI/train/relation_type_percentages.json",
+      "kind": "training_type_patterns",
+      "sha256": "067bcfcee47b00fa211f3b417e807d04b0862c216d4ccf4d97dfad683979b467",
+      "bytes": 22597,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "units": "percent"
+    },
+    {
+      "path": "assets/WIKI/relation_type_counts.json",
+      "source": "pattern_w_ent/WIKI/train/relation_type_counts.json",
+      "kind": "training_type_patterns",
+      "sha256": "423b3d2c24ba6c615b37dd1617b336135202596b6365f7ee0299d43c0f9ddce7",
+      "bytes": 15961,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "units": "count"
+    },
+    {
+      "path": "assets/WIKI/rules/joint.json",
+      "source": "rule_w_ent/WIKI/r[1,2,3]_n200_exp_w_ent_s123_rules.json",
+      "kind": "main_rules",
+      "sha256": "b601f61816d2197a664b1ae13974409d550f3bdcf36ae6898b2abdb35d414dd8",
+      "bytes": 181484,
+      "external_experiment_identity": "author_confirmed_same_files",
+      "parameters": {
+        "lengths": [
+          1,
+          2,
+          3
+        ],
+        "walks": 200,
+        "seed": 123,
+        "missing_type_weight": "not recorded in bank; historical implementation default is 1.0 on the percentage scale, equivalent to 0.01 on the frequency scale"
+      }
+    },
+    {
+      "path": "assets/WIKI/entity_id_redirects.json",
+      "source": "deterministically reconstructed public-to-fixed WIKI entity ID conversion",
+      "kind": "benchmark_entity_id_redirects",
+      "sha256": "79ba06e40753da920a4c62fa13469f07e58236b636001706e747e71c26e86011",
+      "bytes": 698,
+      "external_experiment_identity": "derived conversion to the author-confirmed benchmark IDs",
+      "conversion": {
+        "source": "https://github.com/waltbai/TKG-forecasting-datasets",
+        "source_ref": "main (content hashes recorded)",
+        "dataset": "WIKI",
+        "upstream_entities": 12554,
+        "fixed_mapped_entities": 12513,
+        "redirects": 41,
+        "redirects_used_in_facts": 40,
+        "changed_rows": {
+          "train": 12435,
+          "valid": 779,
+          "test": 310
+        },
+        "changes": "explicit entity-ID alias redirects only; no relation/time/order/split-size changes",
+        "derivation": "40 observed redirects agree across every row of all three splits; one unused duplicate-name ID is resolved by the supplied unique name map.",
+        "validation": "All three converted upstream splits match the confirmed local canonical SHA-256 exactly.",
+        "upstream_file_sha256": {
+          "train": "5e36f75249d12d35cfbcdf1cf28ba7a01ed2fdba9eebda2509f5df382285bebd",
+          "valid": "95f47263e8f129ebe160404b636ea2870079e50d444513dc59a6518efe57950e",
+          "test": "478d3323e70cb2f4d3f3049a2ed4cb87a0bb899e00960ded4e08aff1028f0090"
+        }
+      }
+    }
+  ],
+  "author_confirmation": {
+    "date": "2026-10-31",
+    "source": "explicit user statement in this conversation",
+    "statement": "是，使用的就是这些文件",
+    "scope": "The five datasets' supplied final entity types, training type patterns and all distributed rule banks are the same files used in the author's external revised experiments.",
+    "verification_basis": "author confirmation plus byte hashes; not a claim of a new local model rerun"
+  },
+  "source_training_confirmation": {
+    "date": "2026-10-31",
+    "source": "explicit user confirmation in this conversation",
+    "statement": "确认",
+    "datasets": [
+      "GDELT",
+      "WIKI"
+    ],
+    "T_P_L_coefficients": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "beta": 1.0,
+    "scope": "Source-training example retrieval uses equal temporal/semantic/logical coefficients and bounded-P beta=1."
+  }
+}

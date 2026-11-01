@@ -1,0 +1,99 @@
+{
+  "repository": "https://github.com/waltbai/TKG-forecasting-datasets",
+  "reference": "main",
+  "verified_date": "2026-10-31",
+  "identity": "Content-addressed by per-file SHA-256 and canonical processed checksums, rather than an unverified commit ID.",
+  "files": [
+    {
+      "dataset": "GDELT",
+      "split": "test",
+      "sha256": "33a18718821f287e713b4f194e647c4daf2e71525334f8633e57c4113240334b",
+      "rows": 305241
+    },
+    {
+      "dataset": "GDELT",
+      "split": "train",
+      "sha256": "7e16d2c676a23c1ac2e5b61d64b83559399c4d83b52d1eae82916f4bcdc64dfc",
+      "rows": 1734399
+    },
+    {
+      "dataset": "GDELT",
+      "split": "valid",
+      "sha256": "f7c8ceeb0f0156a4d2d36db5dd2a12cb811ede196375cf633172fbb398989194",
+      "rows": 238765
+    },
+    {
+      "dataset": "ICEWS14",
+      "split": "test",
+      "sha256": "abe0c9ad6771918f9c687ae5db8b5f2603b2ae4333ba3cef6b34b3b277605574",
+      "rows": 7371
+    },
+    {
+      "dataset": "ICEWS14",
+      "split": "train",
+      "sha256": "8edc8bb54175476275f243999546e1eaf139f4caf958aac5d64b29e2fd463f15",
+      "rows": 74845
+    },
+    {
+      "dataset": "ICEWS14",
+      "split": "valid",
+      "sha256": "c468022f543aa252a5a3c20cc08d9cd9bb28c2ac9777cd0527bc6d911b3396f4",
+      "rows": 8514
+    },
+    {
+      "dataset": "ICEWS18",
+      "split": "test",
+      "sha256": "d061be2fdf975229f99031228034da7e5faf5cd79e74a8a15611abfceed76a9c",
+      "rows": 49545
+    },
+    {
+      "dataset": "ICEWS18",
+      "split": "train",
+      "sha256": "ad64aaced78c70ddeb7da6e709ce9eddcc99a07cac00e6c5008db6e2f5ee0b01",
+      "rows": 373018
+    },
+    {
+      "dataset": "ICEWS18",
+      "split": "valid",
+      "sha256": "4d0d2f45de4fb2b74ad107ce1e3ef284fa9b686c98d8b3f460312b999e045d2b",
+      "rows": 45995
+    },
+    {
+      "dataset": "WIKI",
+      "split": "test",
+      "sha256": "478d3323e70cb2f4d3f3049a2ed4cb87a0bb899e00960ded4e08aff1028f0090",
+      "rows": 63110
+    },
+    {
+      "dataset": "WIKI",
+      "split": "train",
+      "sha256": "5e36f75249d12d35cfbcdf1cf28ba7a01ed2fdba9eebda2509f5df382285bebd",
+      "rows": 539286
+    },
+    {
+      "dataset": "WIKI",
+      "split": "valid",
+      "sha256": "95f47263e8f129ebe160404b636ea2870079e50d444513dc59a6518efe57950e",
+      "rows": 67538
+    },
+    {
+      "dataset": "YAGO",
+      "split": "test",
+      "sha256": "65e3581bf30a34bca40d64befadd7a0a484d52b6c112160ef2368f251b1343fc",
+      "rows": 20026
+    },
+    {
+      "dataset": "YAGO",
+      "split": "train",
+      "sha256": "5c2c8a864def1ae9aadafe195bb9fdf88521da46d95a987dd49194bb27b66d71",
+      "rows": 161540
+    },
+    {
+      "dataset": "YAGO",
+      "split": "valid",
+      "sha256": "92918895603a637d6ed0a9456648f4c2209f5af545bd3453c1ffe4791b7bfea7",
+      "rows": 19523
+    }
+  ],
+  "processing": "Remove optional fifth column and canonicalize whitespace; apply only the supplied explicit WIKI alias-ID map. Preserve relations, times, row order and split sizes."
+}

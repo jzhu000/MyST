@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyd
+*.so
+build/
+data/
+processed/
+outputs/
+models/
+.pytest_cache/

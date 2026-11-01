@@ -1,0 +1,16 @@
+{
+  "protocol": "myst-response-bounded-v1",
+  "endpoint_budget": 50,
+  "max_body_length": 3,
+  "cutoff_len": 1536,
+  "sampling_seed": 42,
+  "discovery": {"walks": 200, "seed": 123, "confidence_attempts": 500, "epsilon_type": 0.01},
+  "datasets": {
+    "ICEWS14": {"alpha": 1.0, "lambda": 1.0, "beta": 1.0},
+    "ICEWS18": {"alpha": 1.0, "lambda": 1.0, "beta": 1.0},
+    "YAGO": {"alpha": 0.05, "lambda": 1.0, "beta": 0.25},
+    "GDELT": {"alpha": 1.0, "lambda": 1.0, "beta": 1.0, "source_examples": 100000},
+    "WIKI": {"alpha": 1.0, "lambda": 1.0, "beta": 1.0, "source_examples": 30000}
+  },
+  "parameter_origin": "Target alpha/lambda/beta transcribed from current response.md; no claim that historical v1 weight manifests validate these values against supplied banks. GDELT/WIKI source T/P/L coefficients (1,1,1) and beta=1 were explicitly confirmed by the author on 2026-10-31."
+}

@@ -1,0 +1,20 @@
+# Shared LlamaFactory 0.9.1 settings. scripts/run.py fills model/data/setting paths.
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_target: all
+lora_rank: 8
+lora_alpha: 16
+lora_dropout: 0.0
+template: empty
+cutoff_len: 1536
+per_device_train_batch_size: 32
+gradient_accumulation_steps: 16
+learning_rate: 0.0001
+num_train_epochs: 1.0
+bf16: true
+logging_steps: 10
+save_strategy: epoch
+overwrite_output_dir: false
+train_on_prompt: false
+seed: 42
